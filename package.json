@@ -1,14 +1,33 @@
 {
-  "name": "wesbot",
+  "name": "zirculo",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "deploy": "now -e CONSUMER_KEY=@z-twit-key -e CONSUMER_SECRET=@z-twit-secret -e ACCESS_TOKEN=@z-twit-access -e ACCESS_TOKEN_SECRET=@z-twit-access-secret"
+  },
+  "now": {
+    "alias": "zirculo-bot",
+    "files": [
+      "config.js",
+      "index.js"
+    ]
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^4.0.0",
+    "express": "^4.15.4",
+    "snyk": "1.31.0",
     "twit": "^2.2.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wesbos/wesbot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wesbos/wesbot/issues"
+  },
+  "homepage": "https://github.com/wesbos/wesbot#readme",
+  "description": "Ziculo bot based on wesbot"
 }
