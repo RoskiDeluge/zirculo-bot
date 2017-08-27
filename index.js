@@ -15,6 +15,7 @@ const app = express();
 
 const T = new Twit(config);
 
+//Eliminated this array of random phrases. -RD 
 /* const niceThingsToSay = [
   'It\'s Zirculo, RD\'s bot! He wrote a little more about his ideas at https://roskideluge.github.io/',
   'Hey There! The eclipse was amazing, check this out https://roskideluge.github.io/',
@@ -25,6 +26,8 @@ const T = new Twit(config);
 ]; */
 
 // const funEmojis = ['👊','🔥','👍','🎉','💁','🙃','🍕','😎','😘','👏','✌️','👌','👈','👙','🐷','🍟'];
+
+//Eliminated function that creates a reply (buildTweet) for tracked words/phrases. - RD
 
 /* function buildTweet() {
   // get a random emoji
@@ -40,6 +43,8 @@ const stream = T.stream('statuses/filter', {
 
 stream.on('tweet', (tweet) => {
   console.log(tweet);
+  
+  
   /* const createdTweet = {
     status: `@${tweet.user.screen_name} ${buildTweet()}`,
     in_reply_to_status_id: tweet.id_str
